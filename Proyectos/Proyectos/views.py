@@ -10,6 +10,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 
+from django.contrib.auth.decorators import login_required
+
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -20,7 +22,10 @@ def login_view(request):
             login(request, user)
             messages.success(request, 'Bienvenido, {}'.format(user.username))
 
-            if user.rol and user.rol.tipo_usuario == 'Padre':
+            if user.is_superuser:
+                # Si es superusuario, redirige al panel de admin
+                return redirect('admin:index')
+            elif user.rol and user.rol.tipo_usuario == 'Padre':
                 # Redirige a la URL deseada para los padres
                 return redirect('vista_vinculo')
             else:
@@ -32,6 +37,7 @@ def login_view(request):
             return render(request, 'login.html', {})
 
     return render(request, 'login.html', {})
+
 
 # views.py
 from Core.models import Usuario
