@@ -1,0 +1,86 @@
+body {
+    font-family: cursive;
+    background-size: cover;
+    background-image: url('/static/images/FondoAd.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+    background-color: rgba(255, 255, 255, 0.4); 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    color:  #21042c;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family:cursive
+}
+h3 {
+    color:  #21042c;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family:cursive
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #21042c;
+}
+
+.form-control {
+    width: 100%;
+    padding: 5px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; 
+}
+
+
+.btn-primary {
+    background-color: #21042c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+p{
+    color:  #21042c;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family:cursive
+}
+a{
+    color:  #21042c;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family:cursive
+}
+.form-control {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group label {
+    font-weight: bold;
+}

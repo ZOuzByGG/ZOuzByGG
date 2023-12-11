@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --padding-container: 100px 0;
+    --color-title: #001A49;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    position: relative; /* Asegura que el pseudo-elemento se posicione correctamente */
+    background-image: linear-gradient(100deg, #0000008c 0%, #0000008c 100%), url('images/Fondo11.avif'); 
+
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #fff;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(100deg, #0000008c 0%, #0000008c 100%), url('images/Actividad2Fondo.jpeg'); 
+    background-size: 60% 100%; /* Cambiado de contain a 100% 100% */
+    background-position: center center; /* Ajusta según sea necesario */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
+
+/* Agrega estos estilos al final de tu archivo CSS */
+.hero__container {
+    position: relative;
+}
+
+#carrito-productos{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight:500; /* Ajusta este valor según tu preferencia (normalmente va de 100 a 900) */    
+}
+
+.flecha-abajo {
+    position: absolute;
+    bottom: 100px; /* Ajusta la distancia desde la parte inferior según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Esto mantiene la proporción de la imagen */
+}
+
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.product {
+    background-color:  rgba(255, 255, 255, 0.2); 
+    padding: 20px;
+    border-radius: 1em;
+    margin: 10px;
+    width: 40%; 
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight:500; /* Ajusta este valor según tu preferencia (normalmente va de 100 a 900) */
+    letter-spacing: 1px; /* Ajusta este valor según tu preferencia */
+    border: 5px solid #000000; /* Ajusta el grosor del borde aquí */
+
+
+}
+
+.custom-button {
+    display: inline-block;
+    background-color: #2091F9;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 20px;
+    border-radius: 32px;
+    margin-left: 34px;
+    text-align: center;
+    
+    
+}
+
+.custom-button:hover {
+    background-color: #04142A;
+}
+
+.color-deseado {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight:500; /* Ajusta este valor según tu preferencia (normalmente va de 100 a 900) */  font-size: 30px;
+    font-weight:500; /* Ajusta este valor según tu preferencia (normalmente va de 100 a 900) */
+}
+#total {
+   color: #ffffff;
+   font-size: 30px;
+   font-weight:500; /* Ajusta este valor según tu preferencia (normalmente va de 100 a 900) */
+}
+
+.image-container {
+    text-align: center; 
+    margin: 20px auto; 
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+.nav {
+    --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__title {
+    font-weight: 350;
+    font-size: 30px;
+}
+
+.nav__link {
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.nav__items {
+    list-style: none;
+}
+
+.nav__links {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__img {
+    display: block;
+    width: 30px;
+}
+
+
+.nav__close {
+    display: var(--show, none);
+}
+
+
+/* Hero container */
+
+.hero__container {
+    max-width: 800px;
+    --padding-container: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 3rem;
+}
+
+.hero__paragraph {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600; /* Ajusta este valor según tu preferencia (normalmente va de 100 a 900) */
+    letter-spacing: 2px; /* Ajusta este valor según tu preferencia */
+    color: #ffffff;
+}
+
+
+.cta {
+    display: inline-block;
+    background-color: #2091F9;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 20px;
+    border-radius: 32px;
+    margin-left: 34px;
+}
+
+/* About */
+
+.about {
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+
+.about__paragraph h2 {
+    line-height: 1.7;
+}
+
+.about__main {
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+
+.about__icons {
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+    
+}
+
+.about__icon {
+    width: 50px;
+    
+}
+.footer__icon {
+    width: 200px;
+    height: 200px;
+    margin-right:20px;
+    
+}
+
+
+/* Footer */
+.footer {
+    background-color: #04142A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer__title,
+.footer__newsletter {
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 20px; /* Ajusta según sea necesario */
+    color: #fff;
+    text-align: center;
+}
+
+.footer__header {
+    margin-bottom: 20px;
+}
+
+.footer__logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: -100px; /* Ajusta según sea necesario */
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra verticalmente */
+    border-bottom: 1px solid #fff;
+    padding-bottom: 30px;
+}
+
+.nav--footer {
+    padding-bottom: 20px;
+    display: flex;
+    gap: 1em;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+}
+
+.nav__link--footer {
+    display: flex;
+    align-items: center;
+    margin-right: 260PX;
+}
+
+.footer__inputs {
+    display: flex;
+    overflow: hidden;
+}
+
+.footer__input {
+    background-color: #fff;
+    height: 50px;
+    display: block;
+    padding-left: 10px;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    margin-right: 16px;
+}
+
+.footer__submit {
+    display: inline-block;
+    height: 50px;
+    padding: 0 20px;
+    background-color: #2091F9;
+    border: none;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.footer__copy {
+    --padding-container: 30px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer__copyright {
+    font-weight: 300;
+}
+
+.footer__icons {
+    margin-bottom: 10px;
+}
+
+.footer__img {
+    width: 30px;
+    
+}
+.contact-info {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Agrega margen inferior para separar de la siguiente sección */
+    color: #fff;
+}
+/* Ajusta el tamaño de las imágenes pequeñas */
+.contact-icons .icon {
+    width: 25px; /* Puedes ajustar el tamaño según tus preferencias */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Haz que el texto sea blanco */
+.contact-info, .contact-info p, .contact-info li {
+    color: #fff; /* Ajusta el color de texto según tu diseño */
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.contact-info ul {
+    list-style: none; /* Quita los puntos/bullets de la lista */
+    padding: 0;
+}
+/* Agrega estilos para la flecha hacia arriba */
+.arrow-icon {
+    width: 30px;
+    height: auto;
+}
+
+
+/* Agrega espacio entre las actividades y el pie de página */
+main {
+    margin-bottom: 20px;
+}
+
+
+@media (max-width:800px){
+    .nav__menu{
+        display: block;
+    }
+
+    .nav__link--menu{
+        position: fixed;
+        background-color: #000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s opacity;
+    }
+
+    .nav__link--show{
+        --show: block;
+        opacity:1 ;
+        pointer-events: unset;
+    }
+
+    .nav__close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .hero__title{
+        font-size: 2.5rem;
+    }
+
+
+    .about__main{
+        gap: 2em;
+    }
+
+    .about__icons:last-of-type{
+        grid-column: 1/-1;
+    }
+
+
+    .knowledge__container{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 3em;
+        text-align: center;
+    }
+
+    .knowledge__picture{
+        grid-row: 1/2;
+        justify-self: center;
+    }
+
+    .testimony__container{
+        grid-template-columns: 30px 1fr 30px;
+    }
+
+    .testimony__body{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        gap: 3em;
+        justify-items:center ;
+    }
+
+
+    .testimony__img{
+        width: 200px;
+        height: 200px;
+        
+    }
+
+    .questions__copy{
+        width: 100%;
+    }
+
+    .footer__container{
+        flex-wrap: wrap;
+    }
+
+    .nav--footer{
+        width: 100%;
+        justify-items: center;
+    }
+
+    .nav__link--footer{
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    .footer__form{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .footer__input{
+        flex: 1;
+    }
+
+}
+
+
+@media (max-width:600px){
+    .hero__title{
+        font-size: 2rem;
+    }
+
+    .hero__paragraph{
+        font-size: 1rem;
+    }
+
+    .subtitle{
+        font-size: 1.8rem;
+    }
+
+    .price__element{
+        width: 90%;
+    }
+
+    .price__element--best{
+        width: 90%;
+        /* padding: 40px; */
+    }
+
+    .price__price{
+        font-size: 2rem;
+    }
+
+    .testimony{
+        --padding-container: 60px 0;
+    }
+
+    .testimony__container{
+        grid-template-columns: 28px 1fr 28px;
+        gap: .9em;
+    }
+
+    .testimony__arrow{
+        width: 100%;
+    }
+
+    .testimony__course{
+        margin-top: 15px;
+    }
+
+    .questions__title{
+        font-size: 1rem;
+    }
+
+    .footer__title{
+        justify-self: start;
+        margin-bottom: 15px;
+    }
+
+    .nav--footer{
+        padding-bottom: 60px;
+    }
+
+    .nav__link--footer{
+        justify-content: space-between;
+    }
+
+    .footer__inputs{
+        flex-wrap: wrap;
+    }
+
+    .footer__input{
+        flex-basis: 100%;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    .footer__submit{
+        margin-right: auto;
+        margin-left: 0;
+        
+
+        /* 
+        margin:0;
+        width: 100%;
+        */
+    }
+}

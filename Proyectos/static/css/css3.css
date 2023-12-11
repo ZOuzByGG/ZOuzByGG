@@ -1,0 +1,238 @@
+/* Estilos generales */
+body {
+    font-family: cursive;
+    background-image: url('images/FondoAd.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    color:#21042c;
+    padding: 3px 0;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 20px; 
+}
+
+.navbar h2 {
+    margin: 0;
+    color: #21042c;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar ul li:hover {
+    background-color: #c787e1;
+}
+
+.navbar ul a {
+    color:#21042c;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.header {
+    text-align: center; 
+    color: #21042c;
+    font-weight: bold;
+    
+}
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #21042c;
+    font-weight: bold;
+}
+
+
+.header p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.planet-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.planet {
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 490px;
+    color: #21042c;
+    border-radius: 1em;
+    font-weight: bold;
+}
+
+.planet h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.planet a {
+    display: inline-block;
+    background-color: #21042c;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 15px;
+
+}
+
+.planet a:hover {
+    background-color: #3c284a;
+    color: #fbfbfb;
+}
+
+.planet-image {
+    width: 200px; 
+    height: 200px; 
+}
+
+.planet-images {
+    width: 10px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #21042c;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Estilos para el contenedor del botón de explorar */
+.button-container {
+    text-align: center; /* Centra horizontalmente el contenido */
+}
+
+/* Estilos para el contenedor del botón */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Opcional: ajusta la altura del contenedor según tus necesidades */
+}
+
+/* Estilos para el botón de explorar */
+.explore-button {
+    background-color: #21042c;
+    padding: 20px 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
+    color: #fbfbfb;
+    margin-top: -800px; /* Ajusta el margen superior según sea necesario */
+    font-weight: bold;
+}
+
+.explore-button:hover {
+    background-color: #3c284a;
+    color: #fbfbfb;
+}
+
+.explore-button a {
+    text-decoration: none;
+    color: #fbfbfb;
+}
+
+.explore-button a:hover {
+    text-decoration: none;
+    color: #fbfbfb;
+}
+
+
+/* Clase para el efecto de desvanecimiento */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+/* Estilos para la imagen debajo del botón */
+.image-below-button {
+    display: block;
+    margin-top: -750px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.contenedor {
+    text-align: center; /* Centra horizontalmente el contenido */
+}
+
+.contenedor img {
+    display: inline-block; /* Hace que la imagen sea un elemento en línea */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+h2{
+    color: #312137;
+}
+
+.contenedor {
+    text-align: center;
+}
+
+.contenedor img {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.activity-buttons {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de la disposición a columna */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.activity-buttons a {
+    background-color: #21042c; /* Color de fondo original */
+    color: #fbfbfb; /* Color de texto original */
+    padding: 20px 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px 0; /* Añade espacio entre los botones */
+    text-decoration: none; /* Elimina el subrayado de enlaces */
+}
+
+.activity-buttons a:hover {
+    background-color: #3c284a; /* Color de fondo al pasar el mouse */
+    color: #fbfbfb;
+}

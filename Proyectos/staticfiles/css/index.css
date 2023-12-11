@@ -1,0 +1,287 @@
+/* Estilos generales */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+body {
+    font-family: cursive;
+    background-color: #fff; /* Blanco */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: #120b08;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    background-color: #21042c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex; /* Alinea los elementos a los extremos */
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center;
+    
+}
+
+.logo {
+    width: 75px;
+    margin-right: -100px; /* Ajusta el margen derecho para separar el logo del texto */
+    margin-left: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex; /* Alinea los elementos de la lista horizontalmente */
+    align-items: center; /* Alinea verticalmente los elementos de la lista */
+    text-decoration: none;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #21042c;
+}
+
+.navbar ul li a.special {
+    color: #ffffff; /* Color del texto para los elementos especiales */
+}
+
+
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9); 
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Un valor menor que el z-index de la barra de navegación */
+    border: 1px solid #21042c;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    left: 0;
+    top: 100%;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: #21042c;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #21042c;
+}
+
+.dropdown-content a.special {
+    color: #21042c; /* Color del texto para los elementos especiales en el submenú */
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos Fooster */
+.footer {
+    position: fixed;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #21042c;
+    color: #ffffff;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.footer h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.footer-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.expand-button span {
+    font-size: 18px;
+}
+
+.footer p {
+    margin: 0;
+    display: none;
+}
+
+.footer-content {
+    display: none;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.transparency-section {
+    position: relative;
+    text-align: center;
+    padding: 50px 0;
+    background-image: url('images/Transparencia.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    opacity: 0.9;
+    z-index: 1; /* Asegura que la sección de transparencia esté por encima de los submenús */
+}
+
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajusta el color y la opacidad según sea necesario */
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(33, 4, 44, 0.8), rgba(33, 4, 44, 0.8)), url('images/Transparencia.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.special1{
+    color: #21042c;
+}
+/* Estilos generales */
+
+/* ... (Tu código actual) ... */
+
+/* Estilos específicos para la sección blanca */
+.white-section {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 50px; /* Ajusta según sea necesario */
+    text-align: center;
+}
+
+.white-section h2 {
+    color: #ffffff;
+}
+
+.white-section p {
+    color: #ffffff;
+}
+
+/* Estilos para títulos en las secciones */
+.transparency-section h2,
+.project-description h2,
+.interactive-demos h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px; /* Tamaño más grande para resaltar */
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Estilos para títulos en las secciones de Descripción del Proyecto y Demostraciones Interactivas */
+.project-description h2,
+.interactive-demos h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px; /* Tamaño más grande para resaltar */
+    font-weight: bold;
+    color: #21042c;
+}
+
+/* Estilos para párrafos en las secciones de Descripción del Proyecto y Demostraciones Interactivas */
+.project-description p,
+.interactive-demos p {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px; /* Tamaño más grande para resaltar */
+    color: #21042c;
+    line-height: 1.6;
+}
+
+/* Agrega este estilo para el botón de inicio de sesión */
+.login-btn {
+    margin-left: 10px;
+    background-color: rgba(255, 255, 255, 0.4); 
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efecto de transición para resaltar */
+    margin-right: 10px; /* Ajusta el valor del margen derecho según sea necesario */
+     color: #ffffff; /* Color del texto en el botón */
+    text-decoration: none;
+    display: inline-block; /* Alinea el texto verticalmente en el botón */
+
+}
+
+/* Cambia el color del texto cuando el mouse pasa sobre el botón */
+.login-btn:hover {
+    background-color: #553263;
+    text-decoration: none;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+}
+
+/* Cambia el color del texto dentro del botón */
+.login-btn a {
+    color: #ffffff; /* Color del texto en el botón */
+    text-decoration: none;
+    display: inline-block; /* Alinea el texto verticalmente en el botón */
+    
+}
+
+/* Estilo para el enlace visitado (puede ser el mismo que el normal) */
+.login-btn a:visited {
+    color: #ffffff; /* Color del texto en el botón */
+}

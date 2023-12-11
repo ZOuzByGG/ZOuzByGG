@@ -1,0 +1,111 @@
+body {
+    font-family: cursive;
+    background-image: url('images/FondoAd.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    color: #21042c;
+    padding: 3px 0;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar ul li:hover {
+    background-color: #c787e1;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #21042c;
+    font-weight: bold;
+}
+
+.header {
+    text-align: center;
+    color: #21042c;
+    font-weight: bold;
+}
+.header p {
+    text-align: center;
+    color: #21042c;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #21042c;
+    font-weight: bold;
+}
+
+/* Estilo para el contenedor de video */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Ajusta la altura según tus necesidades */
+}
+
+video {
+    width: 720px; /* Ajusta el ancho del video */
+
+}
+
+/* Estilo para los botones */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    width: 20%; /* Ajusta el ancho del contenedor de botones */
+    margin: 0 auto; /* Centra horizontalmente los botones */
+}
+
+button {
+    background-color: #21042c;
+    color: #fff;
+    padding: 5px 20px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #3c284a;
+}
+.footer {
+  position:fixed;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #21042c;
+    color: #ffffff;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}

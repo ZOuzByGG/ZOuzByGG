@@ -1,0 +1,172 @@
+body {
+    font-family: cursive;
+    background-image: url('images/FondoAd.gif'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    color:#312137;
+    padding: 3px 0;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 20px; 
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar ul li:hover {
+    background-color: #c787e1;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #312137;
+    font-weight: bold;
+}
+
+.header {
+    text-align: center; 
+    color: #21042c;
+    font-weight: bold;
+    
+}
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #21042c;
+    font-weight: bold;
+}
+
+
+.header p {
+    font-size: 18px;
+    margin: 0;
+}
+
+
+.header h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #21042c;
+    font-weight: bold;
+}
+
+
+.footer {
+    position: adsolute;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #21042c;
+    color: #ffffff;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+}
+
+.footer p {
+    margin: 0;
+}
+/* Estilos para las lecciones */
+.lección-item {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+
+.lección-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #21042c;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/* Estilos para las lecciones */
+.Lección-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Establece un diseño de cuadrícula con 2 columnas */
+.Lecciones {
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Dos columnas igualmente espaciadas */
+    grid-gap: 20px; /* Espacio entre los cuadros */
+}
+
+.Lecciones H1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+/* Estilo para el título de la lección */
+.lección-title {
+    font-size: 25px;
+    color: #21042c;
+    margin-bottom: 10px;
+}
+
+/* Estilo para la dificultad */
+.lección-diff {
+    font-size: 25px;
+    color: #21042c;
+    margin-bottom: 10px;
+}
+
+/* Estilo para la descripción */
+.lección-description {
+    font-size: 25px;
+    color: #21042c;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el contenido */
+.lección-content {
+    font-size: 25px;
+    color: #21042c;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el botón de inscripción */
+button {
+    background-color: #21042c;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Cambiar el color de fondo cuando se pasa el mouse sobre el botón */
+button:hover {
+    background-color: #3c284a;
+}

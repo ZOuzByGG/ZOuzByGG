@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/css.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="icon" href="{% static 'css/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Super Estrellas del Ahorro</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="{% static 'css/images/icono.gif' %}" alt="Logo de Super Estrellas del Ahorro" class="logo">
+        <h2>Super Estrellas del Ahorro</h2>
+        <ul>
+            <li><button class="notification-button"><i class="fas fa-bell"></i></button></li>
+            
+            <li><a href="{% url 'planetas_m' %}">Volver Al Espacio</a></li>
+            
+            <li><a href="{% url 'logout' %}" class="logout-button">Cerrar Sesión</a></li>
+            
+        </ul>
+    </div>
+
+<header class="header">
+    <h1>Bienvenido Al Planeta Del Valor Adquisitivo Del Dinero</h1>
+    <br>
+    <p>Selecciona Una Actividad Para Comenzar</p>
+</header>
+<br>
+<div class="notification-menu">
+    <!-- Contenido del menú de notificaciones -->
+    <p>No hay notificaciones pendientes</p>
+</div>
+<div class="container">
+    <div class="row planet-container">
+        <div class="col-md-6 col-lg-3">
+            <div class="planet d-flex flex-column align-items-stretch" id="actividades-didacticas">
+                <h2>Actividades Didácticas</h2>
+                <img class="img-fluid planet-image1" src="{% static 'css/images/Pancho.gif' %}" width="250px" height="200px" alt="Imagen Actividades Didácticas">
+                <p>Explora actividades didácticas y aprende sobre el ahorro y las finanzas.</p>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <a class="btn btn-primary" href="{% url 'actividades_didacticas' %}">Navegar Ahora</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="planet d-flex flex-column align-items-stretch" id="ejemplos">
+                <h2>¿Qué Es El Dinero?</h2>
+                <img class="img-fluid planet-image1" src="{% static 'css/images/Dinero.gif' %}" width="300px" alt="Imagen Ejemplos">
+                <p>Descubre el concepto y la historia del dinero en el mundo financiero.</p>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <a class="btn btn-primary" href="{% url 'queesdinero' %}">Navegar Ahora</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="planet d-flex flex-column align-items-stretch" id="que-es-el-dinero">
+                <h2>El Valor Del Dinero</h2>
+                <img class="img-fluid planet-image" src="{% static 'css/images/Moneda.gif' %}" alt="Imagen Qué Es El Dinero">
+                <p>Comprende cómo el valor del dinero puede cambiar y afectar tus finanzas.</p>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <a class="btn btn-primary" href="{% url 'valor_del_dinero' %}">Navegar Ahora</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="planet d-flex flex-column align-items-stretch" id="ejemplos">
+                <h2>Lecciones</h2>
+                <img class="img-fluid planet-image" src="{% static 'css/images/Bongo.gif' %}" alt="Imagen Ejemplos">
+                <p>Explora ejemplos prácticos sobre el ahorro y la inversión financiera.</p>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <a class="btn btn-primary" href="{% url 'lecciones_valor_adquisitivo' %}">Navegar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer text-center mt-4">
+    <div class="footer-header">
+        <h2>&copy; 2023 Super Estrellas del Ahorro</h2>
+        <div class="expand-button" id="expand-button">
+            <span>▼</span>
+        </div>
+    </div>
+    <div class="footer-content" id="footer-content">
+        <div class="footer-left">
+            <img src= "{% static 'css/images/icono.gif' %}" width="100px" alt="Logo de Super Estrellas del Ahorro">
+        </div>
+        <div class="footer-center">
+            <div class="social-links">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">¿Quienes Somos?</a>
+                <a href="#" target="_blank">Instragram</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            
+        </div>
+    </div>
+</footer>
+
+<script src="{% static 'js/notificaciones.js' %}"></script>
+<script src="{% static 'js/footer.js' %}"></script>
+</body>
+</html>

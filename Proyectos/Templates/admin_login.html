@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/loginadmin.css' %}">
+    <link rel="icon" href="{% static 'css/images/favicon.ico' %}" type="image/x-icon">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <h2>SUPER ESTRELLAS DEL AHORRO</h2>
+        <h3>Construye un universo de conocimientos</h3>
+        <div class="row">
+            <div class="col">
+                <h2>Inicio de sesión</h2>
+
+                <form method="post">
+                    {% csrf_token %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            {% if message.tags == 'error' %}
+                                <p class="error-message">{{ message }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    <div class="form-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" id="username" name="username" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" class="form-control">
+                    </div>
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <br>
+                    <br>
+                    <br><a href="{% url 'contrasenaadmin_view' %}" class="forgot-password">¿Olvidaste tu contraseña?</a>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:8000/actividad02/ -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Estrellas del Ahorro</title>
+    <link rel="icon" type="image/png" href="http://127.0.0.1:8000/static/css/images/favicon.ico">
+    <link rel="stylesheet" href="./Super Estrellas del Ahorro_files/normalize.css">
+    <link rel="stylesheet" href="./Super Estrellas del Ahorro_files/estilos-Actividad2.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">
+                    <img src="./Super Estrellas del Ahorro_files/icono.gif" width="30px" height="30px" alt="Logo de la página" class="logo">
+                    Super Estrellas Del Ahorro
+                </h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="http://127.0.0.1:8000/ActividadesDisponibles/" class="nav__links">Volver a las Actividades</a>
+                </li>
+                <li class="nav__items">
+                    <a href="http://127.0.0.1:8000/login/" class="nav__links">Mi Perfil</a>
+                </li>
+                <li class="nav__items">
+                    <a href="http://127.0.0.1:8000/logout/" class="nav__links">Cerrar sesión</a>
+                </li>
+                <li class="nav__items">
+                    <img src="./Super Estrellas del Ahorro_files/close.svg" class="nav__close">
+                </li>
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./Super Estrellas del Ahorro_files/menu.svg" class="nav__img">
+            </div>
+        </nav>
+        <section id="inicio" class="hero__container container">
+            <h1 class="hero__title">Actividad 2: Tienda Virtual</h1>
+            <p class="hero__paragraph">Aquí encontrarás una amplia selección de productos únicos y emocionantes inspirados en el espacio exterior y la exploración espacial. Nuestra tienda es el destino perfecto para los entusiastas del espacio, soñadores cósmicos y aficionados a la astronomía que desean llevar un pedazo del universo a sus vidas.</p>
+            <img src="./Super Estrellas del Ahorro_files/FlechaAbajo.png" alt="Flecha Abajo" class="flecha-abajo" id="flecha-abajo-trigger">
+        </section>
+        
+    </header>
+    
+    <main>
+        <div class="image-container">
+            <img src="./Super Estrellas del Ahorro_files/Pancho.gif" alt="Imagen entre productos">
+        </div>
+    
+        <div class="container">
+            <div class="product-list">
+                <div class="product">
+                    <img src="./Super Estrellas del Ahorro_files/producto1.gif" width="150px" height="200px" alt="Producto 1">
+                    <h3>Pluma Espacial</h3>
+                    <p>Características destacadas:</p>
+                    <p>Tinta avanzada que fluye sin problemas en gravedad cero.</p>
+                    <p>Cuerpo de aleación ligera con un diseño inspirado en naves espaciales.</p>
+                    <p>Punta resistente que soporta las condiciones extremas del espacio.</p>
+                    <p>Eleva tu escritura a nuevas alturas y convierte cada palabra en una aventura espacial con nuestra Pluma Espacial</p>
+                    <p>Precio: $50,000 COP</p>
+                    <br>
+                    <br>
+                    <button class="custom-button" onclick="agregarAlCarrito(&#39;Pluma Espacial&#39;, 50000)">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="./Super Estrellas del Ahorro_files/producto2.gif" width="200px" height="200px" alt="Producto 2">
+                    <h3>Varita Mágica</h3>
+                    <p>¿Siempre soñaste con tener poderes?</p>
+                    <p>Características destacadas:</p>
+                    <p>Creada por artesanos expertos</p>
+                    <p>Una gema mágica incrustada en la empuñadura que brilla con luz propia.</p>
+                    <p>Incluye un libro de hechizos.</p>
+                    <p>Domina el arte de la magia y sorprende a tus amigos y familiares con trucos sorprendentes. ¡La Varita Mágica es la herramienta esencial para cualquier aspirante a mago o maga!</p>
+                    <p>Precio: $75,000 COP</p>
+                    <br>
+                    <button class="custom-button" onclick="agregarAlCarrito(&#39;Varita Mágica&#39;, 75000)">Agregar al Carrito</button>
+                </div>
+            </div>
+    
+            <div id="carrito">
+                <h2 class="color-deseado">Carrito de Compras</h2>
+                <div id="carrito-productos">
+                </div>
+                <p id="total">Total: $0 COP</p>
+                <button class="custom-button" onclick="vaciarCarrito()">Vaciar Carrito</button>
+            </div>
+        </div>
+    
+        <script src="./Super Estrellas del Ahorro_files/actividad2.js.descarga"></script>
+    </main>
+    
+
+
+
+
+    <footer class="footer">
+        <header class="footer__header">
+            <br>
+            <img src="./Super Estrellas del Ahorro_files/icono.gif" width="100" alt="Super Estrellas del Ahorro" class="footer__logo">
+        </header>
+
+        <section class="footer__container container">
+            <h2 class="footer__title">Descubre más</h2>
+            <br>
+            <br>
+
+            <ul class="nav__link nav__link--footer">
+
+                <img class="footer__icon " src="./Super Estrellas del Ahorro_files/Saludo.gif" alt="Imagen Qué Es El Dinero">
+
+                <li id="contacto" class="nav__items">
+                    <a href="http://127.0.0.1:8000/actividad02/#contacto" class="nav__links">Contacto</a>
+                    <!-- Información de contacto y iconos debajo del enlace "Contacto" -->
+                    <div class="contact-info">
+                        <ul>
+                            <li><strong>Teléfono:</strong> +123456789</li>
+                            <li><strong>WhatsApp:</strong> +57 3026603867</li>
+                            <li><strong>Correo electrónico:</strong> info@example.com</li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-icons">
+                        <img src="./Super Estrellas del Ahorro_files/Telefono.png" alt="Icono de Teléfono" class="icon">
+                        <img src="./Super Estrellas del Ahorro_files/WhatsApp.png" alt="Icono de WhatsApp" class="icon">
+                        <img src="./Super Estrellas del Ahorro_files/Arroba.png" alt="Icono de Correo electrónico" class="icon">
+                    </div>
+                </li>
+
+                <li class="nav__items">
+                    <!-- Enlace con la flecha hacia arriba para ir al inicio -->
+                    <a href="http://127.0.0.1:8000/actividad02/#inicio" class="nav__links">
+                        <img src="./Super Estrellas del Ahorro_files/Flecha.png" alt="Flecha hacia arriba" class="arrow-icon">
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="http://127.0.0.1:8000/actividad02/#" class="footer__icons"><img src="./Super Estrellas del Ahorro_files/facebook.svg" alt="Facebook" class="footer__img"></a>
+                <a href="http://127.0.0.1:8000/actividad02/#" class="footer__icons"><img src="./Super Estrellas del Ahorro_files/twitter.svg" alt="Twitter" class="footer__img"></a>
+                <a href="http://127.0.0.1:8000/actividad02/#" class="footer__icons"><img src="./Super Estrellas del Ahorro_files/youtube.svg" alt="YouTube" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">© 2023 Super Estrellas del Ahorro</h3>
+        </section>
+    </footer>
+
+
+
+
+    <script src="./Super Estrellas del Ahorro_files/jquery-3.6.4.min.js.descarga"></script>
+    <script>
+        $(document).ready(function() {
+            $("#flecha-abajo-trigger").click(function() {
+                // Obtiene la posición superior de la sección
+                var aboutSectionTop = $("#about-section").offset().top;
+    
+                // Desplaza la página hacia abajo hasta la posición de la sección
+                $("html, body").animate({ scrollTop: aboutSectionTop }, 1000);
+            });
+        });
+    </script>
+    
+    <!-- Agrega la referencia a jQuery (asegúrate de haber cargado jQuery antes de este script) -->
+    <script src="./Super Estrellas del Ahorro_files/jquery-3.6.4.min.js.descarga"></script>
+
+    <!-- Agrega la referencia a tu script actividad_custom.js -->
+    <script src="./Super Estrellas del Ahorro_files/actividad_custom.js.descarga"></script>
+
+    <script src="./Super Estrellas del Ahorro_files/slider.js.descarga"></script>
+    <script src="./Super Estrellas del Ahorro_files/questions.js.descarga"></script>
+    <script src="./Super Estrellas del Ahorro_files/menu.js.descarga"></script>
+    <script src="./Super Estrellas del Ahorro_files/deslizar.js.descarga"></script>
+
+
+
+</body></html>

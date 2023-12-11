@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Styles4.css' %}">
+
+    <link rel="icon" href="{% static 'css/images/favicon.ico' %}" type="image/x-icon">
+    <title>Registro Confirmado</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Registro Confirmado</h2>
+        <p>¡Gracias por registrarte! Tu registro se ha completado con éxito.</p>
+        <p> Tu código de Usuario es: {{ codigo_unico }}</p>
+        <p> Por favor tenlo en cuenta para vincularte a un familiar</p>
+        <p>Para comenzar la aventura, <a href="{% url 'login' %}">inicia sesión</a>.</p>
+    </div>
+</body>
+</html>

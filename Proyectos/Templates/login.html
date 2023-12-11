@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/Styles1.css' %}">
+    <link rel="icon" href="{% static 'css/images/favicon.ico' %}" type="image/x-icon">
+</head>
+
+<body>
+
+    <a href="{% url 'index' %}">
+            
+        <img src="{% static 'css/images/FlechaAtras.png' %}" alt="Volver al índice" class="volver-indice">
+    </a>
+
+    <div class="container my-5">
+        <br>
+        <br>
+        <div class="row">
+            <br>
+            <div class="col">
+                <h2 class="nav__title"> Super Estrellas Del Ahorro </h2>
+                <img src="{% static 'css/images/icono.gif    ' %}" width="30px" height="30px" alt="Logo de la página" class="logo">
+                <br>
+                <br>
+                <h2>Inicio de sesión</h2>
+                <br>
+              
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <br>
+
+                <form method="post">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Usuario">
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña">
+                            <div class="input-group-append">
+                                <button type="button" id="togglePassword" class="btn btn-outline-light">Mostrar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                    <br>
+                    <br>
+                    <a href="{% url 'password_reset' %}" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </form>
+                <div class="register-link">
+                <a href="{% url 'registro' %}"> ¿No tienes una cuenta? Regístrate aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="{% static 'js/Mostrasr.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

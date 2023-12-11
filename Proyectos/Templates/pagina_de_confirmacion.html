@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/Styles3.css' %}">
+    <link rel="icon" href="{% static 'css/images/favicon.ico' %}" type="image/x-icon">
+    <title>Confirmación de Recuperación de Contraseña</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Confirmación de Recuperación de Contraseña</h2>
+        <p class="text-center">Hemos enviado un correo electrónico a la dirección que proporcionaste con instrucciones para restablecer tu contraseña.</p>
+        <p class="text-center">Por favor, verifica tu bandeja de entrada y sigue las instrucciones en el correo electrónico para completar el proceso de recuperación de contraseña.</p>
+        <div class="text-center">
+            <p>¿Recuerdas tu contraseña?<br>
+                 <a href="{% url 'login' %}">Iniciar Sesión</a></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

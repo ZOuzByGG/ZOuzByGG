@@ -1,0 +1,1 @@
+alert("Blue Label de Johnnie Walker, un elissir")

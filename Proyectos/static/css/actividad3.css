@@ -1,0 +1,209 @@
+body {
+    font-family: cursive;
+    background-image: url('images/FondoAd.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    color:#312137;
+    padding: 3px 0;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 20px; 
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar ul li:hover {
+    background-color: #c787e1;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #312137;
+    font-weight: bold;
+}
+
+.header {
+    text-align: center; 
+    color: #312137;
+    font-weight: bold;
+}
+
+.header h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #21042c;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 18px;
+    margin: 0;
+}
+
+
+h1 {
+    color: #312137;
+    
+}
+
+
+
+.hucha {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    line-height: 150px;
+    font-size: 20px;
+}
+
+
+.recolectada {
+    display: none;
+}
+
+#mensaje {
+    font-size: 25px;
+    margin-top: 20px;
+    color: #21042c;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.monedas {
+    position: relative; 
+}
+
+.moneda {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    position: absolute; 
+}
+
+
+#moneda1 {
+    top: 100px;
+    left: 50px;
+}
+
+#moneda2 {
+    top: 200px;
+    left: 150px;
+}
+
+#moneda4 {
+    top: 300px;
+    left: 250px;
+}
+
+#moneda5 {
+    top: 100px;
+    left: 350px;
+}
+
+#moneda6 {
+    top: 200px;
+    left: 450px;
+}
+
+#moneda7 {
+    top: 300px;
+    left: 550px;
+}
+
+#moneda8 {
+    top: 100px;
+    left: 650px;
+}
+
+#moneda9 {
+    top: 200px;
+    left: 750px;
+}
+
+#moneda10 {
+    top: 300px;
+    left: 850px;
+}
+
+#moneda11 {
+    top: 100px;
+    left: 950px;
+}
+
+#moneda12 {
+    top: 200px;
+    left: 1050px;
+}
+
+#moneda13 {
+    top: 300px;
+    left: 1150px;
+}
+
+#moneda14 {
+    top: 100px;
+    left: 1250px;
+}
+
+#moneda15 {
+    top: 200px;
+    left: 1350px;
+}
+#moneda16 {
+    top: 300px;
+    left: 1450px;
+}
+#moneda17 {
+    top: 100px;
+    left: 1550px;
+}
+
+#moneda18 {
+    top: 200px;
+    left: 1650px;
+}
+#moneda19 {
+    top: 300px;
+    left: 1750px;
+}
+.footer {
+  position: absolute;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #21042c;
+    color: #ffffff;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+}
+
+.footer p {
+    margin: 0;
+}

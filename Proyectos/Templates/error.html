@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Estrellas del Ahorro</title>
+    <link rel="icon" type="image/png" href="{% static 'css/images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilos-Error.css' %}">
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">
+                    <img src="{% static 'css/images/icono.gif' %}" width="30px" height="30px" alt="Logo de la página" class="logo">
+                    Super Estrellas Del Ahorro
+                </h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="{% url 'logout' %}" class="nav__links">Cerrar sesión</a>
+                </li>
+                <li class="nav__items">
+                    <img src="{% static 'css/images/close.svg' %}" class="nav__close">
+                </li>
+            </ul>
+
+            <div class="nav__menu">
+                <img src="{% static 'css/images/menu.svg' %}" class="nav__img">
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <section id="inicio" class="hero__container container">
+            <h1 class="hero__title">Ups ,{{ user.username }}!</h1>
+            <p class="hero__paragraph">Parece que ya estas incrito en un actividad Finalizala para continuar</p>
+            <a href="{% url 'lista_actividades' %}" class="cta">Volver</a>
+
+    </header>
+
+    <footer class="footer">
+        <header class="footer__header">  
+            <br>
+            <img src="{% static 'css/images/icono.gif' %}"  width="100" alt="Super Estrellas del Ahorro" class="footer__logo">
+        </header>
+    
+        <section class="footer__container container">
+            <h2 class="footer__title">Descubre más</h2>
+            <br>
+            <br>
+    
+            <ul class="nav__link nav__link--footer">
+    
+                <img class="footer__icon " src="{% static 'css/images/Saludo.gif' %}"   alt="Imagen Qué Es El Dinero">
+    
+                <li id="contacto" class="nav__items">
+                    <a href="#contacto" class="nav__links">Contacto</a>
+                    <!-- Información de contacto y iconos debajo del enlace "Contacto" -->
+                    <div class="contact-info">
+                        <ul>
+                            <li><strong>Teléfono:</strong> +123456789</li>
+                            <li><strong>WhatsApp:</strong> +57 3026603867</li>
+                            <li><strong>Correo electrónico:</strong> info@example.com</li>
+                        </ul>
+                    </div>
+    
+                    <div class="contact-icons">
+                        <img src="{% static 'css/images/Telefono.png' %}" alt="Icono de Teléfono" class="icon">
+                        <img src="{% static 'css/images/WhatsApp.png' %}" alt="Icono de WhatsApp" class="icon">
+                        <img src= "{% static 'css/images/Arroba.png' %}"  alt="Icono de Correo electrónico" class="icon">
+                    </div>
+                </li>
+    
+                <li class="nav__items">
+                    <!-- Enlace con la flecha hacia arriba para ir al inicio -->
+                    <a href="#inicio" class="nav__links">
+                        <img src="{% static 'css/images/Flecha.png' %}"  alt="Flecha hacia arriba" class="arrow-icon">
+                    </a>
+                </li>
+    
+            </ul>
+        </section>
+    
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="{% static 'css/images/facebook.svg' %}"  alt="Facebook" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="{% static 'css/images/twitter.svg' %}" alt="Twitter" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="{% static 'css/images/youtube.svg' %}" alt="YouTube" class="footer__img"></a>
+            </div>
+    
+            <h3 class="footer__copyright">&copy; 2023 Super Estrellas del Ahorro</h3>
+        </section>
+    </footer>
+    
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/questions.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/deslizar.js' %}"></script>
+</body>
+
+</html>

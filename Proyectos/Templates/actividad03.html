@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Estrellas del ahorro</title>
+    <link rel="icon" type="image/png" href="{% static 'css/images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilos-Actividad3.css' %}">
+
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">
+                    <img src="{% static 'css/images/icono.gif' %}" width="30px" height="30px" alt="Logo de la página" class="logo">
+                    Super Estrellas Del Ahorro
+                </h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="{% url 'ActividadesDisponibles' %}" class="nav__links">Volver a las Actividades</a>
+                </li>
+                <li class="nav__items">
+                    <a href="{% url 'logout' %}" class="nav__links">Cerrar sesión</a>
+                </li>
+                <li class="nav__items">
+                    <img src="{% static 'css/images/close.svg' %}" class="nav__close">
+                </li>
+            </ul>
+
+            <div class="nav__menu">
+                <img src="{% static 'css/images/menu.svg' %}" class="nav__img">
+            </div>
+        </nav>
+        <section id="inicio" class="hero__container container">
+            <h1 class="hero__title">Actividad 3: Arrastra las monedas a la Alcancia</h1>
+            <img src="{% static 'css/images/FlechaAbajo.png' %}" alt="Flecha Abajo" class="flecha-abajo" id="flecha-abajo-trigger">
+        </section>
+    </header>
+    <section id="about-section">
+    <main>
+        <div class="hucha" id="hucha">
+            <img src="{% static 'css/images/hucha.gif' %}" width="175px" alt="Hucha">
+        </div>
+
+        <div class="monedas">
+            <img class="moneda" id="moneda1" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$1" draggable="true">
+            <img class="moneda" id="moneda2" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$5" draggable="true">
+            <img class="moneda" id="moneda3" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$5" draggable="true">
+            <img class="moneda" id="moneda4" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$5" draggable="true">
+            <img class="moneda" id="moneda5" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$5" draggable="true">
+            <img class="moneda" id="moneda6" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$5" draggable="true">
+            <img class="moneda" id="moneda7" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$5" draggable="true">
+            <img class="moneda" id="moneda8" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$5" draggable="true">
+            <img class="moneda" id="moneda9" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$5" draggable="true">
+            <img class="moneda" id="moneda10" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$5" draggable="true">
+            <img class="moneda" id="moneda11" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$5" draggable="true">
+            <img class="moneda" id="moneda12" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$5" draggable="true">
+            <img class="moneda" id="moneda13" src="{% static 'css/images/Moneda.gif' %}" width="75px" alt="$5" draggable="true">
+            
+            <!-- Agrega aquí las otras imágenes de monedas -->
+        </div>
+
+        <div id="mensaje"></div>
+    </main>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#flecha-abajo-trigger").click(function () {
+                // Obtiene la posición superior de la sección
+                var aboutSectionTop = $("#about-section").offset().top;
+
+                // Desplaza la página hacia abajo hasta la posición de la sección
+                $("html, body").animate({ scrollTop: aboutSectionTop }, 1000);
+            });
+        });
+    </script>
+
+    <!-- Agrega la referencia a jQuery (asegúrate de haber cargado jQuery antes de este script) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Agrega la referencia a tu script actividad_custom.js -->
+    <script src="{% static 'js/actividad_custom.js' %}"></script>
+
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/questions.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/deslizar.js' %}"></script>
+    <script src="{% static 'js/actividad3.js' %}"></script>
+</section>    
+</body>
+
+</html>

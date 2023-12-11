@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'css/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/Actividadesdinamicas.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+  
+    <title>Actividades Didácticas</title>
+</head>
+<body>
+<div class="navbar">
+    <h2>Super Estrellas del Ahorro</h2>
+    <ul>
+        <li><a href="{% url 'PlanetaAdquisitivo' %}">Volver </a></li>
+        <li><a href="{% url 'planetas_m' %}">Volver Al Espacio</a></li>
+        <li><a href="{% url 'logout' %}" class="logout-button">Cerrar Sesión</a></li>
+    </ul>
+</div>
+
+<header class="header">
+    <h1>Actividades Didácticas</h1>
+</header>
+<div class="contenedor">
+    <img src="{% static 'css/images/Pancho.gif' %}" alt="Pancho">
+    <h2>Selecciona una Actividad</h2>
+    <div class="activity-buttons">
+        <a class="btn btn-primary" href="{% url 'actividad1' %}">Caza del Tesoro</a>
+        <br>
+        <a class="btn btn-primary" href="{% url 'actividad2' %}">Tienda Virtual</a>
+        <br>
+        <a class="btn btn-primary" href="{% url 'actividad3' %}">Ahorro en tu Alcancia</a>
+        <br>
+        <a class="btn btn-primary" href="{% url 'actividad4' %}">El Viaje del Dinero</a>
+    </div>
+</div>
+
+
+<footer class="footer text-center mt-4">
+    <p>&copy; 2023 Super Estrellas del Ahorro</p>
+</footer>
+    
+</body>
+</html>

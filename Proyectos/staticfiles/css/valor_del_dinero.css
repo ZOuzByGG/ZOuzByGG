@@ -1,0 +1,139 @@
+body {
+    font-family: cursive;
+    background-image: url('images/FondoAd.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    
+    color: #21042c;
+    padding: 3px 0;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 20px;
+    
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar ul li:hover {
+    background-color: #c787e1;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #21042c;
+    font-weight: bold;
+}
+
+.header {
+    text-align: center;
+    color: #21042c;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+.container {
+    margin-top: 20px; 
+    background-color: rgba(255, 255, 255, 0.3); 
+    padding: 20px;
+    border-radius: 1em;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    width: 700px;
+    max-width: 100%; 
+    margin: 0 auto; 
+    font-weight: bold;
+    color: #21042c;
+    font-size: 20px;
+}
+
+
+.pregunta {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #21042c;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    background-color: #21042c;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: cursive;
+    display: block;
+    margin: 20px auto;
+}
+
+.btn-primary:hover {
+    background-color: #3c284a;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: cursive;
+    color: #21042c;
+}
+
+#feedback {
+    font-weight: bold;
+    font-size: 25px;
+    font-family: cursive;
+    color: #21042c;
+    text-align: center;
+}
+.footer {
+  
+    text-align: center;
+    padding: 5px 0;
+    background-color: #21042c;
+    color: #ffffff;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}

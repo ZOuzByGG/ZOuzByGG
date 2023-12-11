@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Estrellas del ahorro</title>
+    <link rel="icon" type="image/png" href="{% static 'css/images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilos-Familia.css' %}">
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                
+                <h2 class="nav__title"><img src="{% static 'css/images/icono.gif    ' %}" width="30px" height="30px" alt="Logo de la página" class="logo"> Super Estrellas Del Ahorro </h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="{% url 'vista_vinculo' %}" class="nav__links">Volver</a>
+                </li>
+                <li class="nav__items">
+                    <a href="{% url 'logout' %}" class="nav__links">Cerrar sesión</a>
+                </li>
+                
+                <li class="nav__items">
+            
+                <img src="{% static 'css/images/close.svg' %}" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="{% static 'css/images/menu.svg' %}" class="nav__img">
+            </div>
+        </nav>
+
+        <section id="inicio" class="hero__container container">
+            <h1 class="hero__title">{{ user.username }}!</h1>
+            {% block content %}
+            <h2>Vinculación Exitosa</h2>
+            <p>Usuarios vinculados exitosamente. Ahora eres familia de {{ nombre_usuario_vinculado }}.</p>
+          {% endblock %}
+            
+    </header>   
+    <main>
+
+    </main>
+
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/questions.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/deslizar.js' %}"></script>
+</body>
+
+</html>

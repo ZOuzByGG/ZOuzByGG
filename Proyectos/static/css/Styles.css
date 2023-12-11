@@ -1,0 +1,67 @@
+body {
+    font-family: cursive;
+    background-size: cover;
+    background-image: url('images/Fondo.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.5); /* Ajusta la opacidad del fondo */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajusta la sombra */
+    padding: 20px; /* Reduce el espacio de relleno */
+    max-width: 400px; /* Establece un ancho máximo */
+    text-align: center;
+}
+
+h2 {
+    color: #012b58;
+    font-size: 24px;
+    margin-bottom: 20px; /* Mayor espacio inferior */
+    font-family: cursive;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #012b58;
+    font-weight: bold; /* Hace que las etiquetas sean más visibles */
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px; /* Mayor espacio interior */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Aumenta el tamaño del texto */
+}
+
+.btn-primary {
+    background-color: #012b58;
+    color: #fff;
+    border: none;
+    padding: 12px 20px; /* Aumenta el espacio alrededor del botón */
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+p, a {
+    color: #012b58;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: cursive;
+}
+
+.form-control {
+    font-size: 14px; /* Puedes ajustar el tamaño según tus necesidades */
+}
+

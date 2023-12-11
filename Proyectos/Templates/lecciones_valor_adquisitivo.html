@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/lecciones.css' %}">
+    <link rel="icon" href="{% static 'css/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <title>Lecciones</title>
+</head>
+<body>
+<div class="navbar">
+    <h2>Super Estrellas del Ahorro</h2>
+    <ul>
+        <li><a href="{% url 'PlanetaAdquisitivo' %}">Volver atras</a></li>
+        <li><a href="{% url 'planetas_m' %}">Volver Al Espacio</a></li>
+        <li><a href="{% url 'logout' %}" class="logout-button">Cerrar Sesión</a></li>    </ul>
+</div>
+
+<header class="header">
+    <h1>Lecciones</h1>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2></h2>
+            {% block content %}
+            <div class='Lecciones'>
+                {% for lección_Adquisitivo in lecciones %}
+                
+                <ul class="lección-item">
+                    <img src="{% static 'css/images/Pancho.gif' %}" width="100px" alt="Pancho">
+                    <h1> Lección</h1>
+                    <p class="lección-title">{{lección_Adquisitivo.title}}</p>
+                    <h1> Dificultad</h1>
+                    <p class="lección-diff">{{lección_Adquisitivo.diff_l}}</p>
+                    <h1> Descripción</h1>
+                    <p class="lección-description">{{lección_Adquisitivo.description}}</p>
+                    <h1> Contenidos</h1>
+                    <p class="lección-content">{{lección_Adquisitivo.content}}</p>
+                    <button class="inscribirse-button" data-id="{{ lección.id }}">Inscribirse</button>
+                </ul>
+                {% endfor %}
+            </div>
+            {% endblock %}
+            
+        </div>
+    </div>
+</div>
+<footer class="footer text-center mt-4">
+    <p>&copy; 2023 Super Estrellas del Ahorro</p>
+</footer>
+</body>
+</html>

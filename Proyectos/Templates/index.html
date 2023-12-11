@@ -1,0 +1,266 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Estrellas del ahorro</title>
+    <link rel="icon" type="image/png" href="{% static 'css/images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                
+                <h2 class="nav__title"><img src="{% static 'css/images/icono.gif    ' %}" width="30px" height="30px" alt="Logo de la página" class="logo"> Super Estrellas Del Ahorro </h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+        
+                <li class="nav__items">
+                    <a href="{% url 'login' %}" class="nav__links">Iniciar sesión</a>
+
+                </li>
+                <li class="nav__items">
+            
+                <img src="{% static 'css/images/close.svg' %}" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="{% static 'css/images/menu.svg' %}" class="nav__img">
+            </div>
+        </nav>
+
+        <section  id="inicio" class="hero__container container">
+            <h1 class="hero__title">Navega en un universo de conocimientos </h1>
+            <p class="hero__paragraph">la plataforma que transforma la educación financiera en una emocionante travesía para los pequeños. Aquí, los niños aprenden a manejar dinero de manera inteligente y divertida. Desde lecciones interactivas hasta juegos educativos, cada experiencia está diseñada para formar hábitos financieros sólidos desde temprana edad.</p>
+            <a href="#about-section" class="cta">Saber más</a>
+
+        </section>
+    </header>
+
+    <main>
+        <section id="about-section" class="container about">
+            <h2 class="subtitle">¿Qué aprenderán los niños?</h2>
+            <p class="about__paragraph">Todo lo necesario y obligatorio de la educacion financiera, (Valor del dinero, Metas financieras , Lecciones interactivas , y más)</p>
+
+            <div class="about__main">
+                <article class="about__icons"> 
+                    <img src="{% static 'css/images/Dinero.png' %}"class="about__icon">
+                    <h3 class="about__title">Valor del dinero</h3>
+                    <p class="about__paragrah">Aprender sobre el valor del dinero es entender cuánto podemos comprar
+                         y cómo nuestras decisiones afectan nuestras finanzas. ¡Es clave para tomar decisiones financieras inteligentes!</p>
+                </article>
+
+                <article class="about__icons"> 
+                    <img src="{% static 'css/images/Metas.png' %}" class="about__icon">
+                    <h3 class="about__title">Metas financieras</h3>
+                    <p class="about__paragrah"> Aprenderán a planificar, ahorrar e invertir de manera estratégica
+                         para alcanzar sus sueños financieros. ¡Las metas financieras son el mapa hacia el éxito económico!</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="{% static 'css/images/Libro.png' %}" class="about__icon">
+                    <h3 class="about__title">Lecciones</h3>
+                    <p class="about__paragrah">Con las lecciones financieras aprenderán a tomar decisiones inteligentes sobre el dinero, desde ahorrar 
+                        y invertir hasta planificar un futuro financiero sólido. ¡Son la clave para una vida financiera exitosa!</p>
+                </article>
+
+              
+            </div>
+        </section>
+
+        <section  id="actividades" class="knowledge">
+            <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                    <h2 class="subtitle">Disfruta de todas nuestras actividades y lecciones interactivas.</h2>
+                    <p class="knowledge__paragraph">En Super Estrellas del Ahorro, creemos que la creatividad y la 
+                        interacción son la clave del aprendizaje financiero. Disfruta de nuestras actividades y lecciones 
+                        interactivas que hacen que descubrir el mundo del ahorro sea divertido y educativo. ¡Aprenderás jugando!</p>
+                    <a href="{% url 'login' %}" class="cta">Comenzar Ahora </a>
+                </div>
+
+                <figure class="knowledge__picture"> 
+                    <img src="{% static 'css/images/NiñosLecciones.png' %}" class="knowledge__img">
+                </figure>
+            </div>
+        </section>
+
+        
+
+        <section  id="Testimonios" class="testimony"> 
+            <div class="testimony__container container"> 
+                <img src= "{% static 'css/images/leftarrow.svg' %}"class="testimony__arrow" id="before">
+
+                <section class="testimony__body testimony__body--show" data-id="1">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Mi nombre es Maria Gómez,<br><span class="testimony__course">Madre Ahorradora.</span></h2>
+                        <p class="testimony__review">¡Super Estrellas del Ahorro ha sido una bendición para mi familia! Mi hijo, Juan, aprendió habilidades financieras de manera divertida y educativa. Las lecciones interactivas y las actividades creativas han hecho que el aprendizaje sea emocionante para él. Estoy encantada de verlo planificar sus ahorros y entender el valor del dinero de una manera tan práctica. 
+                            ¡Gracias Super Estrellas por hacer del aprendizaje financiero algo tan emocionante para nuestros hijos!</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src= "{% static 'css/images/face.jpg ' %}" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="2">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">¡Hola a todos! Soy Juan David Perez Gómez, <span class="testimony__course">Estrella Financiera en
+                            Formación.</span></h2>
+                        <p class="testimony__review">Super Estrellas del Ahorro es lo máximo. Aprendo sobre el dinero jugando y haciendo cosas divertidas. Me enseñaron que no solo se trata de tener billetes y monedas, sino de hacer que el dinero trabaje para mí. Gracias a Super Estrellas, ahora sé cómo ahorrar para las 
+                            cosas que realmente quiero. ¡Es como un juego chévere que me ayuda a ser un súper ahorrador!</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src= "{% static 'css/images/face2.jpg ' %}" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="3">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Mi nombre es Tomás Rodríguez, <span class="testimony__course">Padre Ahorrador.</span></h2>
+                        <p class="testimony__review">Estoy sorprendido con Super Estrellas del Ahorro. Mi hija Juliana ha aprendido un montón de cosas sobre el dinero. Ahora me explica cómo funcionan las inversiones ¡y yo apenas sabía sumar billetes! Las actividades interactivas son geniales, y nos ha unido más como familia. ¡Gracias a Super Estrellas por hacer que el aprendizaje financiero sea algo para todas las edades!</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src= "{% static 'css/images/face3.jpg ' %}" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="4">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Hola a todos, soy Juliana Rodríguez, <span class="testimony__course">Estrella Financiera en
+                                Formación.</span></h2>
+                        <p class="testimony__review">Quiero contarles lo emocionante que ha sido aprender sobre dinero con Super Estrellas del Ahorro. ¡Es como una aventura divertida! Ahora sé cómo ahorrar y gastar mi dinero de manera inteligente. Las lecciones son tan geniales que hasta me gusta hacer mi propia alcancía. Gracias a Super Estrellas, ¡soy una súper ahorradora en camino!</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src= "{% static 'css/images/face4.jpg ' %}" class="testimony__img">
+                    </figure>
+                </section>
+                
+
+                <img src= "{% static 'css/images/rightarrow.svg ' %}"  class="testimony__arrow" id="next">
+            </div>
+        </section>
+
+        <section class="questions container">
+            <h2 class="subtitle">Preguntas frecuentes</h2>
+            <p class="questions__paragraph">Encuentra respuestas a las preguntas más comunes sobre nuestra plataforma de educación financiera. Si tienes alguna otra pregunta, no dudes en contactarnos.</p>
+        
+            <section class="questions__container">
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Qué ofrece Super Estrellas del Ahorro?
+                            <span class="questions__arrow">
+                                <img src= "{% static 'css/images/arrow.svg ' %}"  class="questions__img">
+                            </span>
+                        </h3>
+        
+                        <p class="questions__show">Super Estrellas del Ahorro es una plataforma educativa que brinda lecciones interactivas y actividades creativas para enseñar habilidades financieras a niños y jóvenes. Aprenderán sobre ahorro, inversión y toma de decisiones financieras de manera divertida.</p>
+                    </div>
+                </article>
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Cuáles son los recursos educativos disponibles en Super Estrellas del Ahorro?
+                            <span class="questions__arrow">
+                                <img src= "{% static 'css/images/arrow.svg ' %}"  class="questions__img">
+                            </span>
+                        </h3>
+                
+                        <p class="questions__show">Super Estrellas del Ahorro ofrece una amplia gama de recursos educativos para niños. Nuestra plataforma incluye lecciones interactivas, juegos educativos, videos instructivos . Estos recursos están diseñados para enseñar de manera divertida conceptos financieros clave, ayudando a los niños a desarrollar habilidades financieras sólidas desde una edad temprana.</p>
+                    </div>
+                </article>
+                
+        
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Cuáles son los beneficios de participar en Super Estrellas del Ahorro?
+                            <span class="questions__arrow">
+                                <img src= "{% static 'css/images/arrow.svg ' %}"  class="questions__img">
+                            </span>
+                        </h3>
+        
+                        <p class="questions__show">Participar en Super Estrellas del Ahorro proporciona a los niños y jóvenes herramientas prácticas para entender el valor del dinero, aprender a ahorrar y tomar decisiones financieras inteligentes. Además, fomentamos la creatividad y el trabajo en equipo para hacer del aprendizaje una experiencia enriquecedora y divertida.</p>
+                    </div>
+                </article>
+            </section>
+        
+            <section class="questions__offer">
+                <h2 class="subtitle">¿Listo para un futuro financiero brillante?</h2>
+                <p class="questions__copy">Descubre cómo Super Estrellas del Ahorro puede preparar a tu hijo para un futuro financiero exitoso. ¡Inscríbelo hoy!</p>
+                <a href="{% url 'login' %}" class="cta">Inscríbelo ahora</a>
+            </section>
+        </section>
+        
+        </section>
+    </main>
+
+    <footer class="footer">
+        <header class="footer__header">  
+            <br>
+            <img src="{% static 'css/images/icono.gif' %}"  width="100" alt="Super Estrellas del Ahorro" class="footer__logo">
+        </header>
+    
+        <section class="footer__container container">
+            <h2 class="footer__title">Descubre más</h2>
+            <br>
+            <br>
+    
+            <ul class="nav__link nav__link--footer">
+    
+                <img class="footer__icon " src="{% static 'css/images/Saludo.gif' %}"   alt="Imagen Qué Es El Dinero">
+    
+                <li id="contacto" class="nav__items">
+                    <a href="#contacto" class="nav__links">Contacto</a>
+                    <!-- Información de contacto y iconos debajo del enlace "Contacto" -->
+                    <div class="contact-info">
+                        <ul>
+                            <li><strong>Teléfono:</strong> +123456789</li>
+                            <li><strong>WhatsApp:</strong> +57 3026603867</li>
+                            <li><strong>Correo electrónico:</strong> info@example.com</li>
+                        </ul>
+                    </div>
+    
+                    <div class="contact-icons">
+                      <img src="{% static 'css/images/Telefono.png' %}" alt="Icono de Teléfono" class="icon"> 
+                      <a href="https://api.whatsapp.com/send?phone=573026603867"><img src="{% static 'css/images/WhatsApp.png' %}" alt="Icono de WhatsApp" class="icon"></a> 
+                        <img src= "{% static 'css/images/Arroba.png' %}"  alt="Icono de Correo electrónico" class="icon">
+                    </div>
+                </li>
+    
+                <li class="nav__items">
+                    <!-- Enlace con la flecha hacia arriba para ir al inicio -->
+                    <a href="#inicio" class="nav__links">
+                        <img src="{% static 'css/images/Flecha.png' %}"  alt="Flecha hacia arriba" class="arrow-icon">
+                    </a>
+                </li>
+    
+            </ul>
+        </section>
+    
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="https://www.facebook.com/profile.php?id=61552773415775&locale=es_LA" class="footer__icons"><img src="{% static 'css/images/facebook.svg' %}"  alt="Facebook" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="{% static 'css/images/twitter.svg' %}" alt="Twitter" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="{% static 'css/images/youtube.svg' %}" alt="YouTube" class="footer__img"></a>
+            </div>
+    
+            <h3 class="footer__copyright">&copy; 2023 Super Estrellas del Ahorro</h3>
+        </section>
+    </footer>
+    
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/questions.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/deslizar.js' %}"></script>
+</body>
+
+</html>

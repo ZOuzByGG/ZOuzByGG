@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Estrellas del ahorro</title>
+    <link rel="icon" type="image/png" href="{% static 'css/images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilos-DestallesActividad4.css' %}">
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">
+                    <img src="{% static 'css/images/icono.gif' %}" width="30px" height="30px" alt="Logo de la página" class="logo">
+                    Super Estrellas Del Ahorro
+                </h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                <li class="nav__items">
+                        <a href="{% url 'ActividadesDisponibles' %}" class="nav__links">Volver a las Actividades</a>
+                <li class="nav__items">
+                    <a href="{% url 'logout' %}" class="nav__links">Cerrar sesión</a>
+                </li>
+                <li class="nav__items">
+                    <img src="{% static 'css/images/close.svg' %}" class="nav__close">
+                </li>
+            </ul>
+
+            <div class="nav__menu">
+                <img src="{% static 'css/images/menu.svg' %}" class="nav__img">
+            </div>
+        </nav>
+        <section id="inicio" class="hero__container container">
+            <h1 class="hero__title">¡{{ user.username }}! ¡Listo para explorar la siguiente actividad de educación financiera juntos, Vamos! </h1>
+            <a href="{% url 'actividad04' %}">
+                <img src="{% static 'css/images/Play.png' %}" alt="Flecha Abajo" class="flecha-abajo" id="flecha-abajo-trigger">
+            </a>
+        </section>
+    </header>
+    <style>
+        .hucha-container {
+            position: relative;
+            width: 200px; /* Ancho de la alcancía */
+            height: 200px; /* Altura de la alcancía */
+            overflow: visible; /* Permitir que las monedas se extiendan más allá de los límites del contenedor */
+            animation: moveRight 25s linear infinite; /* Animación de desplazamiento hacia la derecha */
+        }
+    
+        .hucha {
+            width: 100%;
+            height: auto;
+        }
+    
+        .monedas-container {
+            position: absolute;
+            top: -312px; /* Ajusta según sea necesario para posicionar las monedas por encima de la alcancía */
+            left: 50px;
+        }
+    
+        .moneda {
+            width: 100px; /* Ancho de cada moneda */
+            height: auto;
+            margin-right: 10px; /* Espacio entre monedas */
+        }
+    
+        @keyframes moveRight {
+            to {
+                transform: translateX(800%); /* Ajusta la distancia según sea necesario */
+            }
+        }
+    </style>
+    
+    <!-- El resto de tu contenido HTML va aquí -->
+    
+    <div class="hucha-container">
+        <img src="{% static 'css/images/Hucha.gif' %}" width="200px" alt="Alcancia" class="hucha">
+        <div class="monedas-container">
+            <img src="{% static 'css/images/Moneda.gif' %}" width="100px" alt="Moneda 1" class="moneda">
+            <img src="{% static 'css/images/Moneda.gif' %}" width="100px" alt="Moneda 2" class="moneda">
+            <img src="{% static 'css/images/Moneda.gif' %}" width="100px" alt="Moneda 3" class="moneda">
+            <img src="{% static 'css/images/Moneda.gif' %}" width="100px" alt="Moneda 4" class="moneda">
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#flecha-abajo-trigger").click(function() {
+                // Obtiene la posición superior de la sección
+                var aboutSectionTop = $("#about-section").offset().top;
+    
+                // Desplaza la página hacia abajo hasta la posición de la sección
+                $("html, body").animate({ scrollTop: aboutSectionTop }, 1000);
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const monedasContainer = document.querySelector('.monedas-container');
+            const monedas = monedasContainer.querySelectorAll('.moneda');
+    
+            monedasContainer.addEventListener('animationiteration', function () {
+                monedas.forEach(function (moneda) {
+                    moneda.remove(); // Elimina cada moneda cuando la animación se reinicia
+                });
+    
+                // Vuelve a agregar las monedas clonadas
+                monedas.forEach(function (moneda) {
+                    monedasContainer.appendChild(moneda.cloneNode(true));
+                });
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#flecha-abajo-trigger").click(function() {
+                // Obtiene la posición superior de la sección
+                var aboutSectionTop = $("#about-section").offset().top;
+    
+                // Desplaza la página hacia abajo hasta la posición de la sección
+                $("html, body").animate({ scrollTop: aboutSectionTop }, 1000);
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const monedasContainer = document.querySelector('.monedas-container');
+            const monedas = monedasContainer.querySelectorAll('.moneda');
+    
+            monedasContainer.addEventListener('animationiteration', function () {
+                monedas.forEach(function (moneda) {
+                    moneda.remove(); // Elimina cada moneda cuando la animación se reinicia
+                });
+    
+                // Vuelve a agregar las monedas clonadas
+                monedas.forEach(function (moneda) {
+                    monedasContainer.appendChild(moneda.cloneNode(true));
+                });
+            });
+        });
+    </script>
+    
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/deslizar.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/queesdinero.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="icon" href="{% static 'css/images/favicon.ico' %}" type="image/x-icon">
+    <title>¿Que Es El Dinero?</title>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Super Estrellas del Ahorro</h2>
+        <ul>
+            <li><a href="{% url 'PlanetaAdquisitivo' %}">Volver atras</a></li>
+            <li><a href="{% url 'planetas_m' %}">Volver Al Espacio</a></li>
+            <li><a href="{% url 'logout' %}" class="logout-button">Cerrar Sesión</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <header class="header"> 
+        <h1> ¿Qué Es El Dinero?<h1>
+       <p> "Descubre el fascinante mundo del dinero a través de estos videos educativos. Explora su historia, significado y evolución en el ámbito financiero. ¡Aprende mientras disfrutas de contenido interactivo!<p/>
+    </header>
+    <br>
+    <br>
+    <div class="video-container">
+        <video id="video" controls>
+            <source src="{% static 'media/Educativo1.mp4' %}" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="controls">
+        <button id="cambiarVideo1">Video 1</button>
+        <button id="cambiarVideo2">Video 2</button>
+        <button id="cambiarVideo3">Video 3</button>
+    </div>
+    <footer class="footer text-center mt-4">
+        <p>&copy; 2023 Super Estrellas del Ahorro</p>
+    </footer>
+    <script>
+        var video1Url = "{% static 'media/Educativo1.mp4' %}";
+        var video2Url = "{% static 'media/Educativo2.mp4' %}";
+        var video3Url = "{% static 'media/Educativo3.mp4' %}";
+    </script>
+    <script src="{% static 'js/queeseldinero.js' %}"></script>
+</body>
+</html>

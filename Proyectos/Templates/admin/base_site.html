@@ -1,0 +1,15 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block extrahead %}
+  <link rel="icon" type="image/png" href="{% static 'css/images/favicon.ico' %}">
+
+
+{% endblock %}
+
+{% block branding %}
+  <h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+      <img src="{% static 'css/images/Logo_Super_Estrellas_del_Ahorro.png' %}" alt="100" width=100>
+    </a>
+  </h1>
+{% endblock %}

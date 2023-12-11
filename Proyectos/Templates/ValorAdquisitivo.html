@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/css3.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="icon" href="{% static 'css/images/favicon.ico' %}" type="image/x-icon">
+    <title>Super Estrellas del Ahorro</title>
+</head>
+<body>
+
+<div class="navbar">
+    <h2>Super Estrellas del Ahorro</h2>
+    <ul>
+        <li><a href="{% url 'planetas_m' %}">Volver Al Espacio</a></li>
+        <li><a href="{% url 'logout' %}" class="logout-button">Cerrar sesión</a></li>
+    </ul>
+</div>
+<br>
+<br>
+<header class="header">
+    <H1>¡Hola, explorador estelar! Bienvenido al Planeta Valor Adquisitivo del Dinero, donde aprenderás sobre el poder del dinero</H1>
+    <P>En este planeta, descubrirás cómo funciona el dinero en la vida real. Aprenderás a comparar precios, tomar decisiones inteligentes y ahorrar.</P>
+    <p>¿Listo para comenzar tu misión espacial financiera? ¡Vamos a explorar!</p>
+</header>
+<br>
+<br>
+<!-- Botón de explorar con el evento onclick -->
+<div class="button-container">
+    <a href="{% url 'PlanetaAdquisitivo' %}" class="explore-button">Explorar Ahora</a>
+</div>
+<img src="{% static 'css/images/Dragoncito.gif' %}" alt="Imagen debajo del botón" class="image-below-button">
+
+
+<footer class="footer text-center mt-4">
+    <p>&copy; 2023 Super Estrellas del Ahorro</p>
+</footer>
+</body>
+</html>

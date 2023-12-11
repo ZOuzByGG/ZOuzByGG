@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Estrellas del ahorro</title>
+    <link rel="icon" type="image/png" href="{% static 'css/images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilos-Informes.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'css/images/favicon.ico' %}">
+
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">
+                    <img src="{% static 'css/images/icono.gif' %}" width="30px" height="30px" alt="Logo de la página" class="logo">
+                    Super Estrellas Del Ahorro
+                </h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                
+                <li class="nav__items">
+                    <a href="{% url 'vista_vinculo' %}" class="nav__links">Volver</a>
+                </li>
+
+                <li class="nav__items">
+                    <a href="{% url 'logout' %}" class="nav__links">Cerrar sesión</a>
+                </li>
+                <li class="nav__items">
+                    <img src="{% static 'css/images/close.svg' %}" class="nav__close">
+                </li>
+            </ul>
+
+            <div class="nav__menu">
+                <img src="{% static 'css/images/menu.svg' %}" class="nav__img">
+            </div>
+        </nav>
+        <section id="inicio" class="hero__container container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <h1 class="hero__title">Bienvenido Padre Ahorrador  {{ user.username }} </h1>
+            <p class="hero__paragraph2">Desliza para ver un informe de tu hijo</p>
+
+            <img src="{% static 'css/images/FlechaAbajo.png' %}" alt="Flecha Abajo" class="flecha-abajo" id="flecha-abajo-trigger">
+        </section>
+    </header>
+    <section id="about-section">
+    <main>
+        <div class="container">
+            {% if puntuacion_usuario_vinculado %}
+                <h1 class="titulo">Informe de tu hijo </h1>
+                <img src="{% static 'css/images/Trofeo.gif    ' %}" width="200px" alt="Logo de la página" class="logo">
+                <h1 class="Nombre">{{ username_usuario_vinculado }} </h1>
+                <br>
+                
+
+                <p class="puntuacion">Puntuación de {{ username_usuario_vinculado }} en el sistema: {{ puntuacion_usuario_vinculado }}</p>
+                <p class="mensaje-retroalimentacion">{{ mensaje_retroalimentacion }}</p>
+            {% else %}
+                <p class="mensaje-error">{{ mensaje }}</p>
+            {% endif %}
+            <br>
+            <br>
+            <br>
+            <p class="puntuacion">¿Como se mide esta puntuación?</p>
+
+            <p class="mensaje-retroalimentacion2">En nuestra plataforma, recompensamos el esfuerzo y la dedicación de sus hijos con CatCoins, nuestra moneda virtual. Cada actividad educativa suma CatCoins, Estos CatCoins no solo son puntos, ¡son un reflejo del tiempo y esfuerzo invertidos en el aprendizaje! Animen a sus pequeños a acumular CatCoins, construyendo juntos un camino brillante hacia el conocimiento.</p>
+
+
+<br>
+<br>
+
+            <a href="{% url 'consejos' %}" class="btn-consejos">Consejos para Ayudar a tu Hijo</a>
+
+        </div>
+
+    </main>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#flecha-abajo-trigger").click(function () {
+                // Obtiene la posición superior de la sección
+                var aboutSectionTop = $("#about-section").offset().top;
+
+                // Desplaza la página hacia abajo hasta la posición de la sección
+                $("html, body").animate({ scrollTop: aboutSectionTop }, 1000);
+            });
+        });
+    </script>
+
+    <!-- Agrega la referencia a jQuery (asegúrate de haber cargado jQuery antes de este script) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Agrega la referencia a tu script actividad_custom.js -->
+    <script src="{% static 'js/actividad_custom.js' %}"></script>
+
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/questions.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/deslizar.js' %}"></script>
+    <script src="{% static 'js/actividad3.js' %}"></script>
+</section>    
+<footer class="footer">
+    <header class="footer__header">
+        <br>
+        <img src="{% static 'css/images/icono.gif' %}" width="100" alt="Super Estrellas del Ahorro" class="footer__logo">
+    </header>
+<section class="footer__container container">
+    <br>
+    <br>
+    <br>
+    <br>
+
+        <h2 class="footer__title">Descubre más</h2>
+
+
+        <ul class="nav__link nav__link--footer">
+
+            <img class="footer__icon " src="{% static 'css/images/Saludo.gif' %}" alt="Imagen Qué Es El Dinero">
+
+            <li id="contacto" class="nav__items">
+                <a href="#contacto" class="nav__links">Contacto</a>
+                <!-- Información de contacto y iconos debajo del enlace "Contacto" -->
+                <div class="contact-info">
+                    <ul>
+                        <li><strong>Teléfono:</strong> +123456789</li>
+                        <li><strong>WhatsApp:</strong> +57 3026603867</li>
+                        <li><strong>Correo electrónico:</strong> info@example.com</li>
+                    </ul>
+                </div>
+
+                <div class="contact-icons">
+                    <img src="{% static 'css/images/Telefono.png' %}" alt="Icono de Teléfono" class="icon">
+                    <img src="{% static 'css/images/WhatsApp.png' %}" alt="Icono de WhatsApp" class="icon">
+                    <img src="{% static 'css/images/Arroba.png' %}" alt="Icono de Correo electrónico" class="icon">
+                </div>
+            </li>
+
+            <li class="nav__items">
+                <!-- Enlace con la flecha hacia arriba para ir al inicio -->
+                <a href="#inicio" class="nav__links">
+                    <img src="{% static 'css/images/Flecha.png' %}" alt="Flecha hacia arriba" class="arrow-icon">
+                </a>
+            </li>
+
+        </ul>
+    </section>
+
+    <section class="footer__copy container">
+        <div class="footer__social">
+            <a href="#" class="footer__icons"><img src="{% static 'css/images/facebook.svg' %}" alt="Facebook" class="footer__img"></a>
+            <a href="#" class="footer__icons"><img src="{% static 'css/images/twitter.svg' %}" alt="Twitter" class="footer__img"></a>
+            <a href="#" class="footer__icons"><img src="{% static 'css/images/youtube.svg' %}" alt="YouTube" class="footer__img"></a>
+        </div>
+
+        <h3 class="footer__copyright">&copy; 2023 Super Estrellas del Ahorro</h3>
+    </section>
+</footer>
+</body>
+
+</html>

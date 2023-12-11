@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/loginadmin.css' %}">
+    <link rel="icon" href="{% static 'css/images/favicon.ico' %}" type="image/x-icon">
+    <title>Confirmación de Recuperación de Contraseña</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Confirmación de Recuperación de Contraseña</h2>
+        <p>Hemos enviado un correo electrónico a la dirección que proporcionaste con instrucciones para restablecer tu contraseña.</p>
+        <p>Por favor, verifica tu bandeja de entrada y sigue las instrucciones en el correo electrónico para completar el proceso de recuperación de contraseña.</p>
+        <div class="back-to-login">
+            <p>¿Recuerdas tu contraseña?</p> <a href="{% url 'admin_login' %}">Iniciar Sesión</a>    
+        </div>
+    </div>
+</body>
+</html>

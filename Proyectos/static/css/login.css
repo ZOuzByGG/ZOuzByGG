@@ -1,0 +1,5 @@
+/* static/css/login.css */
+#login h2 a img {
+    max-width: 50px; /* Ajusta el tamaño máximo según tus necesidades */
+    max-height: 50px; /* Ajusta el tamaño máximo según tus necesidades */
+}
