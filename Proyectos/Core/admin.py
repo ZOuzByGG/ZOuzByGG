@@ -93,7 +93,7 @@ class UsuarioAdmin(UserAdmin):
         data = []
 
         # Encabezados de la tabla
-        headers = ['ID', 'username', 'first_name', 'lastname', 'email', 'rol', 'genero', 'código_unico', 'estado']
+        headers = ['ID', 'username', 'first_name', 'lastname', 'email', 'Rol', 'genero', 'código_unico', 'estado']
         data.append(headers)
 
         # Agrega los datos de los usuarios a la tabla
@@ -104,7 +104,7 @@ class UsuarioAdmin(UserAdmin):
                 usuario.first_name,
                 usuario.lastname,
                 usuario.email,
-                usuario.rol.get_tipo_usuario_display(),  # Obtén el nombre del rol
+                usuario.rol.get_tipo_usuario_display() if usuario.rol else '-',
                 usuario.genero,
                 usuario.codigo_unico,
                 usuario.estado,
