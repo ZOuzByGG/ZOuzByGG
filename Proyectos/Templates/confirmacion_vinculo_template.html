@@ -1,10 +1,13 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+    <link rel="icon" href="{% static 'css/images/favicon.ico' %}" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="{% static 'css/images/favicon.ico' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Estrellas del ahorro</title>
     <link rel="icon" type="image/png" href="{% static 'css/images/favicon.ico' %}">
@@ -22,9 +25,8 @@
             </div>
 
             <ul class="nav__link nav__link--menu">
-                <li class="nav__items">
-                    <a href="{% url 'vista_vinculo' %}" class="nav__links">Volver</a>
-                </li>
+
+        
                 <li class="nav__items">
                     <a href="{% url 'logout' %}" class="nav__links">Cerrar sesión</a>
                 </li>
@@ -40,20 +42,23 @@
         </nav>
 
         <section id="inicio" class="hero__container container">
-            <h1 class="hero__title">{{ user.username }}!</h1>
-
-              <h2>Error</h2>
-              {% if error_message %}
-              <p>{{ error_message }}</p>
-            {% else %}
-              <p>Ocurrió un error.</p>
-            {% endif %}
-            
+            <h1>Confirmar Vínculo</h1>
+            <p>Estás a punto de vincularte con el siguiente usuario:</p>
+            <p>Username: {{ usuario_a_vincular.username }}</p>
+            <p>Nombre: {{ usuario_a_vincular.first_name }} {{ usuario_a_vincular.last_name }}</p>
+            <p>Email: {{ usuario_a_vincular.email }}</p>
+      
+            <form method="post" action="{% url 'confirmacion_vinculo' %}">
+              {% csrf_token %}
+              <input type="hidden" name="codigo_unico" value="{{ usuario_a_vincular.codigo_unico }}">
+              <button class="confirm-button " type="submit">Confirmar Vínculo</button>
+              <br>
+              <a class="Cancelar"   href="{% url 'vista_vinculo' %}">Cancelar</a>       
     </header>
     <main>
-        
-    </main>   
-    
+<br>
+<br>
+
     <script src="{% static 'js/slider.js' %}"></script>
     <script src="{% static 'js/questions.js' %}"></script>
     <script src="{% static 'js/menu.js' %}"></script>

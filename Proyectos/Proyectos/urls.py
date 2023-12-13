@@ -54,6 +54,8 @@ urlpatterns = [
     path('generar_informe_vinculos/', generar_informe_vinculos, name='generar_informe_vinculos'),
     path('generar_informe_ninos/', generar_informe_ninos, name='generar_informe_ninos'),
     path('ranking/', ranking, name='ranking'),
+    path('confirmacion_vinculo/', views.confirmacion_vinculo, name='confirmacion_vinculo'),
+
     
 
 

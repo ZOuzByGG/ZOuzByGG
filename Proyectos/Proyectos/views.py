@@ -281,23 +281,60 @@ def actualizar_puntuacion(request):
         return JsonResponse({'mensaje': 'Se esperaba una solicitud POST'})
 
 #################################################################################################################
-#Familia 
-#Familia
+ 
+# Familia
+# Familia
 from django.shortcuts import render, redirect
-from django.contrib import messages
 from Core.models import Usuario, VinculoFamiliar
+from django.contrib import messages
+from django.contrib.messages import get_messages
 
 def vista_vinculo(request):
     if request.method == 'POST':
         codigo_ingresado = request.POST.get('codigo_unico', None)
         usuario_actual = request.user
 
-        # Verificar si el usuario ya tiene un vínculo
-        if VinculoFamiliar.objects.filter(usuario_principal=usuario_actual).exists():
-            messages.error(request, 'Ya tienes un vínculo. No puedes crear más vínculos.')
-            return render(request, 'error_template.html')
+        try:
+            usuario_a_vincular = Usuario.objects.get(codigo_unico=codigo_ingresado)
+
+            # Verificar si ya hay un vínculo entre los usuarios
+            if VinculoFamiliar.objects.filter(usuario_principal=usuario_actual, usuario_vinculado=usuario_a_vincular).exists():
+                messages.error(request, 'Ya tienes un vínculo con este usuario.')
+                return render(request, 'error_template.html', {'error_message': 'Ya tienes un vínculo con este usuario.'})
+
+            # Verificar si el usuario ya tiene un vínculo
+            if VinculoFamiliar.objects.filter(usuario_principal=usuario_actual).exists():
+                messages.error(request, 'Ya tienes un vínculo. No puedes crear más vínculos.')
+                return render(request, 'error_template.html', {'error_message': 'Ya tienes un vínculo. No puedes crear más vínculos.'})
+
+            # Pasa la información del usuario a vincular al contexto
+            context = {'usuario_a_vincular': usuario_a_vincular, 'mostrar_modal': True}
+
+            # Elimina los mensajes almacenados en la sesión
+            storage = get_messages(request)
+            storage.used = True
+
+            # Renderiza la plantilla de confirmación con el contexto
+            return render(request, 'confirmacion_vinculo_template.html', context)
+
+        except Usuario.DoesNotExist:
+            messages.error(request, 'Código único no válido. Verifique el código e inténtelo nuevamente.')
+            return render(request, 'error_template.html', {'error_message': 'Código único no válido. Verifique el código e inténtelo nuevamente.'})
+
+    return render(request, 'vinculo_template.html')
+
+
+
+def confirmacion_vinculo(request):
+    if request.method == 'POST':
+        # Obtén el usuario actual
+        usuario_actual = request.user
+
+        # Obtén el código ingresado desde el formulario
+        codigo_ingresado = request.POST.get('codigo_unico', None)
 
         try:
+            # Intenta obtener el usuario a vincular
             usuario_a_vincular = Usuario.objects.get(codigo_unico=codigo_ingresado)
 
             # Crear el vínculo en VinculoFamiliar
@@ -314,8 +351,8 @@ def vista_vinculo(request):
             messages.error(request, 'Código único no válido. Verifique el código e inténtelo nuevamente.')
             return render(request, 'error_template.html')
 
-    return render(request, 'vinculo_template.html')
-
+    # Si el método no es POST, simplemente renderiza la plantilla de confirmación
+    return render(request, 'confirmacion_vinculo_template.html')
 
 
 

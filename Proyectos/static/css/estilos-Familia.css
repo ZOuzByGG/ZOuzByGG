@@ -28,6 +28,8 @@ body {
     color: #fff;
 }
 
+
+
 .hero::before {
     content: "";
     position: absolute;
@@ -36,7 +38,7 @@ body {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(100deg, #0000008c 0%, #0000008c 100%), url('images/FondoInformes.jpg'); 
-    background-size: 100% 145%; /* Ajusta estos valores según sea necesario */
+    background-size: 100% 160%; /* Ajusta estos valores según sea necesario */
     clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
     z-index: -1;
 }
@@ -166,6 +168,16 @@ button:hover {
     margin-left: 34px;
 }
 
+.Cancelar {
+    display: inline-block;
+    background-color: #2091F9;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 20px;
+    border-radius: 32px;
+    margin-left: 34px;
+}
 /* About */
 
 .about {
